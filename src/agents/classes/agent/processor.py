@@ -1,19 +1,4 @@
-import json
-
 from datetime import datetime
-
-
-def _try_to_parse(self, obj):
-    """Attempt to parse JSON in multiple ways."""
-    try:
-        return json.loads(obj)
-    except Exception:
-        pass
-    try:
-        return json.loads(f"[{obj}]")
-    except Exception:
-        pass
-    return None
 
 
 def process_information(self, _type, key, raw_value, limit=-1, cache=True):
