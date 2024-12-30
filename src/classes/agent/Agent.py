@@ -4,10 +4,10 @@ from datetime import datetime
 import spacy
 from sentence_transformers import SentenceTransformer
 
-from src.agents.classes.agent.check_similarity import check_similarity
-from src.agents.classes.agent.processor import process_information
-from src.agents.classes.agent.web_parser import parse_web_url
-from src.agents.classes.machine.Machine import Machine
+from src.classes.agent.check_similarity import check_similarity
+from src.classes.agent.processor import process_information
+from src.classes.agent.web_parser import parse_web_url
+from src.classes.machine.Machine import Machine
 
 
 class Agent(Machine):
@@ -48,6 +48,7 @@ class Agent(Machine):
         }
         self.brain_extended.append(entry)
         print("Information added to knowledge base.")
+        self.save_brain_extended()
 
     def parse_web(self, url):
         parse_web_url(self, url)

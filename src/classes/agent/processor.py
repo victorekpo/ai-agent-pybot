@@ -14,10 +14,11 @@ def process_information(self, _type, key, raw_value, limit=-1, cache=True):
         )
 
         if item_exists:
-            print("Item already exists in brain.", formatted_value)
+            # print("Item already exists in brain.", formatted_value)
             return
 
         if not item_exists:
+            print("Learning new information:", formatted_value)
             self.brain.append({
                 "type": _type,
                 "key": key,
