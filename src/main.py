@@ -2,6 +2,7 @@ import time
 
 from src.agents.classes.agent.Agent import Agent
 
+
 def main():
     start_time = time.time()
 
@@ -11,6 +12,11 @@ def main():
     agent.load_brain()
     agent.live("Milwaukee, Wisconsin")
     load_end = time.time()
+    print(f"Agent Chronological ID: {agent.chronId}")
+    print(f"Agent ID: {agent.id}")
+    print(f"Agent Name: {agent.name}")
+    print(f"Agent Date of Birth: {agent.dob}")
+    print(f"Agent Bank Budget: {agent.bank_budget}")
     print(f"Loading agent took {load_end - load_start:.2f} seconds")
 
     scrape_start = time.time()
