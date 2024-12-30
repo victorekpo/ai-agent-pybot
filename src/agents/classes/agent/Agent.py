@@ -7,12 +7,12 @@ from sentence_transformers import SentenceTransformer
 from src.agents.classes.agent.check_similarity import check_similarity
 from src.agents.classes.agent.processor import process_information
 from src.agents.classes.agent.web_parser import parse_web_url
+from src.agents.classes.machine.Machine import Machine
 
 
-class Agent:
+class Agent(Machine):
     def __init__(self, name):
-        self.name = name
-        self.dob = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        super().__init__(name)
         self.brain = []
         self.brain_extended = []
         self.residence = None
