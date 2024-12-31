@@ -1,6 +1,7 @@
 import time
 
 from src.agents.vic_bot import create_vic_bot
+from src.utils.socket import connect_socket
 
 
 def main():
@@ -35,6 +36,9 @@ def main():
 
     # End tests
     end_time = time.time()
+    connect_socket()
+    # Sleep for 15 minutes (900 seconds)
+    time.sleep(900)
     print(f"Total elapsed time: {end_time - start_time:.2f} seconds")
 
 
