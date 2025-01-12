@@ -1,0 +1,7 @@
+.idea/
+.env
+# Ignore the following files because they will contain sensitive information
+plays/
+intent_model/
+brain.json
+brain_extended.json
