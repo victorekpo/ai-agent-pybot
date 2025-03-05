@@ -34,3 +34,7 @@ similar methods to extract other linguistic features provided by SpaCy's corpora
 
 ## Selenium-Python Documentation
 https://selenium-python.readthedocs.io
+
+To run your script: make run
+To run tests: make test
+To install dependencies: make install

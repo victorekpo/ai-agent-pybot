@@ -4,6 +4,8 @@ from flask import Flask
 
 from src.server.routes.agent_routes import agent_bp
 from src.server.routes.api_routes import api_bp
+from src.server.routes.selenium_routes import sel_bp
+from src.server.routes.test_routes import test_bp
 
 app = Flask(__name__)
 port = 5001
@@ -21,6 +23,8 @@ def run_server():
     # Register blueprints
     app.register_blueprint(api_bp, url_prefix='/api')
     app.register_blueprint(agent_bp, url_prefix='/agent')
+    app.register_blueprint(sel_bp, url_prefix='/sel')
+    app.register_blueprint(test_bp, url_prefix='/test')
 
     app.run(debug=True, use_reloader=False, port=port)
 
