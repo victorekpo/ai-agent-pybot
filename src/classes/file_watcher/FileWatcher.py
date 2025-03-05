@@ -88,6 +88,6 @@ def process_file(filename, content):
 
 
 if __name__ == "__main__":
-    watch_dir = "/Users/<user>/Documents/Bot"
+    watch_dir = "/Users/algorithm.v/Documents/Bot"
     watcher = FileWatcher(watch_dir, process_file)
     watcher.run()

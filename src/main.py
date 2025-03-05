@@ -3,6 +3,7 @@ import time
 from src.agents.vic_bot import vic_bot_1
 from src.classes.agent.train_intent_model import train_intent_model
 from src.server.server import run_server
+from src.services.socketio.socket import connect_socket
 
 
 def main():
@@ -16,6 +17,12 @@ def main():
         # Add more training examples here
     ]
     train_intent_model(TRAINING_DATA)
+
+    # Connect to the socket server
+    sio = connect_socket()
+
+    # Start some tests
+    sio.emit("agent", "hello from vicbot-pybot")
 
     # Collect information from a web url about typescript
     parse_web_start = time.time()

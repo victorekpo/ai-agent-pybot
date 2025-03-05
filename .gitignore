@@ -5,3 +5,6 @@ plays/
 intent_model/
 brain.json
 brain_extended.json
+generated/
+PyWhatKit_DB.txt
+__pycache__/

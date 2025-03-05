@@ -66,3 +66,15 @@ def agent_parse_url():
 
     data = {name: agent.to_dict()}
     return jsonify(data)
+
+
+@agent_bp.route('/sqs/get', methods=['GET'])
+def agent_get_sqs_messages():
+    data = {"message": "Hello, API! Getting SQS messages."}
+    return jsonify(data)
+
+
+@agent_bp.route('/sqs/send', methods=['POST'])
+def agent_send_sqs_message():
+    data = request.json
+    return jsonify(data)
